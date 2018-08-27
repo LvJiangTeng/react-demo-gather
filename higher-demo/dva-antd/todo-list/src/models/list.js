@@ -2,7 +2,7 @@ export default {
   namespace: 'lists',
   state: [],
   reducers: {
-    add(state, { payload: name }) {
+    add(state, { payload:name }) {
       let id = state.reduce(
         (previous, current) => (previous.id > current.id ? previous : current),
       ).id;

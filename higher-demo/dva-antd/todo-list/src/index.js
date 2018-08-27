@@ -13,6 +13,7 @@ const app = dva({
 
 app.model(require('./models/list'));
 app.model(require('./models/add'));
+app.model(require('./models/indexPage'));
 
 // 2. Plugins
 // app.use({});

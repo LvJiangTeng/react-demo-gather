@@ -22,15 +22,22 @@ const fetch = (options) => {
     let domin = ''
     if (url.match(/[a-zA-z]+:\/\/[^/]*/)) {
       domin = url.match(/[a-zA-z]+:\/\/[^/]*/)[0]
+      console.log(domin)
       url = url.slice(domin.length)
+      console.log(url)
     }
+    console.log(1)
+    console.log(url)
     const match = pathToRegexp.parse(url)
+    console.log("match"+match)
     url = pathToRegexp.compile(url)(data)
     for (let item of match) {
       if (item instanceof Object && item.name in cloneData) {
         delete cloneData[item.name]
       }
     }
+    console.log(domin)
+    console.log(url)
     url = domin + url
   } catch (e) {
     message.error(e.message)

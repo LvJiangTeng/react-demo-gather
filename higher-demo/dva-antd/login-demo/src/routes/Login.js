@@ -13,7 +13,7 @@ const Login = ({
   }
 }) => {
   const { loginLoading } = login;
-
+  console.log(loginLoading)
   function handelSubmit() {
     validateFieldsAndScroll((errors, values) => {
       if (errors) {

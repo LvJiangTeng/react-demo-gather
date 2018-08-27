@@ -25,7 +25,7 @@ const IndexPage = ({ dispatch, index }) => {
 
 IndexPage.propTypes = {
 };
-
-export default connect(({ index }) => ({
-  index,
-}))(IndexPage);
+const mapStateToProps=({ index }) => {
+  return {index}
+}
+export default connect(mapStateToProps)(IndexPage);

@@ -43,7 +43,10 @@ module.exports = {
         maxAge: 900000,
         httpOnly: true,
       })
-      res.json({ success: true, message: 'ok' })
+      setTimeout(()=>{
+        res.json({ success: true, message: 'ok' })
+      },3000)
+      
     } else {
       res.status(400).end()
     }

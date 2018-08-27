@@ -27,6 +27,7 @@ export default {
         type: 'showLoginLoading'
       });
       const data = yield call(service.login, payload);
+      console.log(data)
 
       yield put({
         type: 'hideLoginLoading'

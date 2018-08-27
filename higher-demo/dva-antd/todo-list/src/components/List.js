@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { Table, Popconfirm, Button } from 'antd';
 
 const List = ({ onDelete, lists }) => {
+  console.log(lists)
   const columns = [
     {
       title: 'Id',

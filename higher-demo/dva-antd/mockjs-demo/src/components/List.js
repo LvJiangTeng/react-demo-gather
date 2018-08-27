@@ -29,6 +29,7 @@ const List = ({ index }) => {
       dataSource={index}
       columns={columns}
       pagination={{ pageSize: 6 }}
+      
     />
   );
 };
